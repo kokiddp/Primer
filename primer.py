@@ -36,7 +36,7 @@ io = time.time()
 op = open('output.txt', 'w')
 
 for i in num:
-<<<<<<< HEAD
+
     flag = 1
     lim = (int(math.sqrt(i)) + 1)
 
@@ -53,22 +53,21 @@ for i in num:
         print('#', len(primi), ':', i)
         op.write(str(i) + '\n')
 
-=======
-	flag = 1
-	lim = (int(math.sqrt(i)) + 1)
+        flag = 1
+        lim = (int(math.sqrt(i)) + 1)
 
-	for y in pd:
-		if y < lim:
-			if (i%y) == 0:
-				flag = 0
-				break
+        for y in pd:
+            if y < lim:
+                if (i % y) == 0:
+                    flag = 0
+                    break
 
-	if flag == 1:
-		primi.append(i)
-		print('#',len(primi),':', i)
-		op.write(str(i) + '\n')
-		
->>>>>>> a7820ed23564ac925b1d7adb01468037adec80c2
+        if flag == 1:
+            primi.append(i)
+            print('#', len(primi), ':', i)
+            op.write(str(i) + '\n')
+
+
 to = (time.time()) - io
 print('Time elapsed calculating', len(primi),
       'prime numbers <', n, ':', round(to, 4), 'seconds')
