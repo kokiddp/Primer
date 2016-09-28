@@ -36,9 +36,7 @@ op = open('output.txt','w')
 for i in num:
 	flag = 1
 	lim = (int(math.sqrt(i)) + 1)
-	#dp = [d for d in pd if (d < lim)]
 
-	#for y in range(2, lim):
 	for y in pd:
 		if y < lim:
 			if (i%y) == 0:
