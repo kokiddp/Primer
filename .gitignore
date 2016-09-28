@@ -88,5 +88,8 @@ ENV/
 # Rope project settings
 .ropeproject
 
-# Output
+# i/o
 primer.txt
+primi.txt
+input.txt
+output.txt
