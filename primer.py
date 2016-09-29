@@ -37,7 +37,7 @@ print('I will begin calculating primes up to', n, 'in 3 seconds')
 time.sleep(3)
 
 primi = []
-num = range(1, n)
+num = range(2, n)
 
 io = time.time()
 op = open('output.txt', 'w')
