@@ -2,7 +2,7 @@ import math
 import time
 import os
 
-n = 1000000
+n = 100000
 
 print('Looking for input file...')
 ii = time.time()
@@ -15,11 +15,18 @@ if os.path.exists("./input.txt"):
     pd = [int(x) for x in divisori if (int(x) < (math.sqrt(n) + 1))]
     pd.remove(1)
     ip.close()
+    if pd[len(pd) - 1] < math.sqrt(n):
+        print('WARNING: Input file inufficient, it will not be used')
+        print('The biggest number on list (', pd[len(
+            pd) - 1], ') needs to be equal or greater than the square root of the inserted number (', int(math.sqrt(n)) + 1, ')')
+        print('Hint: calculate primes up to', (int(math.sqrt(n)) + 1),
+              'and rename output.txt to input.txt')
+        for q in range(len(pd), int(math.sqrt(n)) + 1):
+            pd.append(q)
 else:
     print('"input.txt" not found.')
     print('I will be slower than ideal.')
     pd = range(2, int(math.sqrt(n)) + 1)
-
 
 ti = (time.time()) - ii
 print('Divisor list generation complete.')
