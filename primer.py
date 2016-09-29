@@ -2,7 +2,7 @@ import math
 import time
 import os
 
-n = 100000
+n = eval(input('Insert a number. I will calculate prime numbers up to that.'))
 
 print('Looking for input file...')
 ii = time.time()
