@@ -13,7 +13,6 @@ if os.path.exists("./input.txt"):
     ip = open('input.txt', 'r')
     divisori = ip.readlines()
     pd = [int(x) for x in divisori if (int(x) < (math.sqrt(n) + 1))]
-    pd.remove(1)
     ip.close()
     if pd[len(pd) - 1] < math.sqrt(n):
         print('WARNING: Input file inufficient, it will not be used')
